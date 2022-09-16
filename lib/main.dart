@@ -162,18 +162,23 @@ class Layout1 extends StatelessWidget {
               ),
             )
             return ListView.builder(
-                      itemCount: titles.length,
-                      itemBuilder: (context, index) {
-                        return Card(
-                          child: ListTile(
-                            title: Text(titles[index]),
-                            subtitle: Text(subtitles[index]),
-                            leading: CircleAvatar(
-                              backgroundImage: NetworkImage(
-                                "https://images.unsplash.com/photo-1547721064-da6cfb341d50")),
-                                trailing: Icon(icons[index])));
-                        }
-              ),
+              itemCount: titles.length,
+              itemBuilder: (context, index) {
+                return Card(
+                  child: ListTile(
+                    onTap: () {
+                      Scaffold.of(context).showSnackBar(SnackBar(
+                        content: Text(titles[index] + ' pressed!'),
+                  ));
+                  },
+                  title: Text(titles[index]),
+                  subtitle: Text(subtitles[index]),
+                  leading: CircleAvatar(
+                      backgroundImage: NetworkImage(
+                          "https://images.unsplash.com/photo-1547721064-da6cfb341d50")),
+                  trailing: Icon(icons[index])));
+              });
+
             ),
           ],
         ),
