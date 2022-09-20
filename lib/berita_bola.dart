@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(ListViewHome());
-}
-
 class ListViewHome extends StatelessWidget {
   final titles = ["List 1", "List 2", "List 3"];
   final subtitles = [

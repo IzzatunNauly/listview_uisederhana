@@ -155,10 +155,10 @@ Widget build(BuildContext context) {
                     alignment: Alignment.centerLeft,
                     padding: EdgeInsets.all(10),
                     child: Text("Indonesia Feb 12, 2022"),
-                  )
+                  ),
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
@@ -167,12 +167,12 @@ Widget build(BuildContext context) {
 }
 }
 class Layout2 extends StatelessWidget {
-  const Layout2({Key? key}) : super(key: key);
+   const Layout2({Key? key}) : super(key: key);
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: ListViewHome(),
-    );
-  }
-}
+   @override
+   Widget build(BuildContext context) {
+     return MaterialApp(
+       home: ListViewHome(),
+     );
+   }
+ }
